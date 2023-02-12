@@ -2,7 +2,7 @@
 
 soccer-api-wrapper is a library for getting information about soccer matches in the five big club competitions, with live score, fixtures, and stats of games available. 
 
-![](https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=%3CCOLOR%3E)
+[![](https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=%3CCOLOR%3E)](./LICENSE)
 
 ## Overview
 
