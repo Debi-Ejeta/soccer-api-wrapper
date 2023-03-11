@@ -67,10 +67,10 @@ ignore = [
 ignore = ['E203', 'W503']
 max-line-length=120
 exclude=[
-    'soccer-api-wrapper/tests/*'
+    'soccer_api_wrapper/tests/*'
 ]
 per-file-ignores= [
-    'soccer-api-wrapper/__init__.py:F401, F403'
+    'soccer_api_wrapper/__init__.py:F401, F403'
 ]
 
 
@@ -100,4 +100,4 @@ python_version = '3.10'
 
 [tool.pytest.ini_options]
 asyncio_mode = 'strict'
-testpaths = 'soccer-api-wrapper/tests'
+testpaths = 'soccer_api_wrapper/tests'
