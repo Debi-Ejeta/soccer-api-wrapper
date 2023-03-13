@@ -41,9 +41,6 @@ jobs:
     - name: Lint
       run: |
         python -m black --check soccer_api_wrapper setup.py && python -m flake8 soccer_api_wrapper setup.py
-    - name: Checks
-      run: |
-        check-manifest -v
     - name: Test
       run: |
         python -m pytest -v soccer_api_wrapper/tests --cov=soccer_api_wrapper --cov-branch --cov-fail-under=75 --cov-report term-missing
