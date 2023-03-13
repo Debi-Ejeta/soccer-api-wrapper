@@ -1,14 +1,4 @@
 import requests
-import json
-
-"""
-
-First iteration: api wrapper for a specific api (like user provides a token)
-Second iteration: allowing it to be used for football in general (I provide the token)
-Third iteration: having a script running every minute with api call and updating datatbase with this file
-                 getting info from the database
-
-"""
 
 api_token = 'XXXXXXXXXXXXXXXXXXX'
 team_id_mapping = {
@@ -17,7 +7,7 @@ team_id_mapping = {
     66: 'Manchester United',
     73: 'Tottenham Hotspur',
     67: 'Newcastle United',
-    63: 'Fulham', 
+    63: 'Fulham',
     64: 'Liverpool',
     397: 'Brighton & Hove Albion',
     402: 'Brentford',
@@ -31,39 +21,47 @@ team_id_mapping = {
     341: 'Leeds United',
     62: 'Everton',
     1044: 'Bournemouth',
-    340: 'Southampton'
+    340: 'Southampton',
 }
+
 
 def get_recent_matches():
     uri = 'https://api.football-data.org/v4/matches'
-    headers = { 'X-Auth-Token': api_token }
+    headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
     return response.json()
 
+
 def get_epl_team_matches(team):
-    id = get_key(team, team_id_mapping) 
-    uri = f'https://api.football-data.org/v4/teams/{id}/matches?status=SCHEDULED'
-    headers = { 'X-Auth-Token': api_token }
+    id = get_key(team, team_id_mapping)
+    uri = f'https://api.football-data.org/v4/teams/{id}/ \
+        matches?status=SCHEDULED'
+    headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
     return response.json()
+
 
 def get_epl_team_standings():
     uri = 'https://api.football-data.org/v4/competitions/PL/standings'
-    headers = { 'X-Auth-Token': api_token }
+    headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
     return response.json()["standings"][0]["table"]
 
+
 def get_epl_top_scorers():
     uri = 'https://api.football-data.org/v4/competitions/PL/scorers'
-    headers = { 'X-Auth-Token': api_token }
+    headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
     return response.json()["scorers"]
 
+
 def get_epl_matchday(matchday):
-    uri = f'https://api.football-data.org/v4/competitions/PL/matches?matchday={matchday}'
-    headers = { 'X-Auth-Token': api_token }
+    uri = f'https://api.football-data.org/v4/competitions/PL/matches? \
+        matchday={matchday}'
+    headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
     return response.json()
+
 
 def get_key(val, mapping):
     for key, value in mapping.items():
