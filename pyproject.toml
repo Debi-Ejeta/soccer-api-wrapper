@@ -99,4 +99,8 @@ python_version = '3.10'
 
 [tool.pytest.ini_options]
 asyncio_mode = 'strict'
+<<<<<<< HEAD
 testpaths = 'soccer_api_wrapper/tests'
+=======
+testpaths = 'soccer_api_wrapper/tests'
+>>>>>>> 31d9527 (modified workflow.yml and toml file)
