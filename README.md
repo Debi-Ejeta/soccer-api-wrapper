@@ -8,6 +8,8 @@ soccer-api-wrapper is a library for getting information about soccer matches in 
 
 [![codecov](https://codecov.io/gh/Debi-Ejeta/soccer-api-wrapper/branch/main/graph/badge.svg?token=1MBRYEYR2J)](https://codecov.io/gh/Debi-Ejeta/soccer-api-wrapper)
 
+[![Build Status](https://github.com/Debi-Ejeta/soccer-api-wrapper/actions/workflows/workflow.yml/badge.svg)](https://github.com/Debi-Ejeta/soccer-api-wrapper/actions/workflows/workflow.yml)
+
 ## Overview
 
 As writing GET and POST requests multiple times to get data can be frustrating, the library will streamline the process of retrieving information about soccer by making the API calls under the hood as an API Wrapper. So if anyone wants to create an app or a bot on apps like Telegram, they will be able to make use of this library to easily create their apps or bots for anything related to soccer without having to make api calls every single time. 
