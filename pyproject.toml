@@ -8,7 +8,7 @@ build-backend="setuptools.build_meta"
 
 [project]
 name = "soccer-api-wrapper"
-authors = [{name = "Your Name", email = "Your_Email@gmail.com"}]
+authors = [{name = "Debi Ejeta", email = "dme2136@columbia.edu"}]
 description="Soccer Api Wrapper"
 readme = "README.md"
 version = "0.1.0"
