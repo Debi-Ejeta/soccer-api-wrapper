@@ -37,50 +37,50 @@ In the first verion of this library, only the premier league is supported.
 Other league functionalities will be added in future versions. 
 
 ```py
-from soccer_api_wrapper import SoccerApi
+from soccer_api_wrapper import soccerapi
 # To check the current standings in the premier league
-teams = SoccerApi.get_epl_team_standings("YourAPIToken")
+teams = soccerapi.get_epl_team_standings("YourAPIToken")
 for team in teams:
     # prints information about the team strating from club at position 1
     print(team)
 ```
 
-Similarly, there are other functions you can call on SoccerApi after importing it:
+Similarly, there are other functions you can call on soccerapi after importing it:
 
 ```py
 # returns the matches happening within the next couple of days
-SoccerApi.get_recent_matches("YourAPIToken")
+soccerapi.get_recent_matches("YourAPIToken")
 ```
 
 ```py
 # returns the matches happening for the team inputted
-SoccerApi.get_epl_team_matches("YourAPIToken", "TeamName")
+soccerapi.get_epl_team_matches("YourAPIToken", "TeamName")
 ```
 
 ```py
 # returns the top scorers in the premier league
-SoccerApi.get_epl_top_scorers("YourAPIToken")
+soccerapi.get_epl_top_scorers("YourAPIToken")
 ```
 
 ```py
 # returns the premier league matches on Matchday 12
-SoccerApi.get_epl_matchday("YourAPIToken", 12)
+soccerapi.get_epl_matchday("YourAPIToken", 12)
 ```
 
 ```py
 # returns information about the team inputted
 # You can access the team_ids down below
-SoccerApi.get_team_info("YourAPIToken", "team_id")
+soccerapi.get_team_info("YourAPIToken", "team_id")
 ```
 
 ```py
 # returns the teams that are currently in the premier league
-SoccerApi.get_epl_teams("YourAPIToken")
+soccerapi.get_epl_teams("YourAPIToken")
 ```
 
 ```py
 # returns information about the player with player_id = 44
-SoccerApi.get_recent_matches("YourAPIToken", 44)
+soccerpi.get_recent_matches("YourAPIToken", 44)
 ```
 You can find the IDs of the teams in the premier league below
 
