@@ -25,6 +25,16 @@ team_id_mapping = {
 
 
 def get_recent_matches(api_token):
+    """Function that returns recent matches that happened/will happen
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+
+    Returns:
+        dict
+
+    """
     uri = 'https://api.football-data.org/v4/matches'
     headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
@@ -32,6 +42,17 @@ def get_recent_matches(api_token):
 
 
 def get_epl_team_matches(api_token, team):
+    """Function that returns matches for a particular premier league team
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+        team (str): name of the football in the format laid out in the doc
+
+    Returns:
+        dict
+
+    """
     id = get_key(team, team_id_mapping)
     uri = f'https://api.football-data.org/v4/teams/{id}/ \
         matches?status=SCHEDULED'
@@ -41,6 +62,19 @@ def get_epl_team_matches(api_token, team):
 
 
 def get_epl_team_standings(api_token):
+    """Function that returns the standings of the premier league
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+
+    Returns:
+        dict
+
+    Raises:
+        KeyError: If the maximum threshold of api calls is reached
+
+    """
     uri = 'https://api.football-data.org/v4/competitions/PL/standings'
     headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
@@ -53,6 +87,19 @@ def get_epl_team_standings(api_token):
 
 
 def get_epl_top_scorers(api_token):
+    """Function that returns the top scorers in the premier league
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+
+    Returns:
+        dict
+
+    Raises:
+        KeyError: If the maximum threshold of api calls is reached
+
+    """
     uri = 'https://api.football-data.org/v4/competitions/PL/scorers'
     headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
@@ -65,6 +112,18 @@ def get_epl_top_scorers(api_token):
 
 
 def get_epl_matchday(api_token, matchday):
+    """Function that returns matches happening on a particular \
+    matchday in the premier league
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+        matchday (int): the value of the matchday
+
+    Returns:
+        dict
+
+    """
     uri = f'https://api.football-data.org/v4/competitions/PL/matches? \
         matchday={matchday}'
     headers = {'X-Auth-Token': api_token}
@@ -73,6 +132,17 @@ def get_epl_matchday(api_token, matchday):
 
 
 def get_team_info(api_token, team_id):
+    """Function that returns information about a particular premier league team
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+        team_id (int): id of the team
+
+    Returns:
+        dict
+
+    """
     uri = f'http://api.football-data.org/v4/teams/{team_id}'
     headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
@@ -80,6 +150,16 @@ def get_team_info(api_token, team_id):
 
 
 def get_epl_teams(api_token):
+    """Function that returns the premier league teams in the current campaign
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+
+    Returns:
+        dict
+
+    """
     uri = 'http://api.football-data.org/v4/competitions/PL/teams'
     headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
@@ -87,6 +167,17 @@ def get_epl_teams(api_token):
 
 
 def get_player_info(api_token, player_id):
+    """Function that returns information about a player
+
+    Args:
+        api_token (str): api token user gets after registering at \
+        https://www.football-data.org/
+        player_id (int): id of the player
+
+    Returns:
+        dict
+
+    """
     uri = f'http://api.football-data.org/v4/persons/{player_id}'
     headers = {'X-Auth-Token': api_token}
     response = requests.get(uri, headers=headers)
