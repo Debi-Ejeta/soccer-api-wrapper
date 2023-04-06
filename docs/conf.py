@@ -5,6 +5,7 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import myst_parser
 import os
 from recommonmark.transform import AutoStructify
 import sphinx_rtd_theme
