@@ -3,15 +3,10 @@
 soccer-api-wrapper is a library for getting information about soccer matches in the five big club competitions, with live score, fixtures, and stats of games available. 
 
 [![](https://img.shields.io/static/v1?label=license&message=Apache-2.0&color=%3CCOLOR%3E)](./LICENSE)
-
 [![](https://img.shields.io/github/issues/Debi-Ejeta/soccer-api-wrapper)](../../issues)
-
 [![codecov](https://codecov.io/gh/Debi-Ejeta/soccer-api-wrapper/branch/main/graph/badge.svg?token=1MBRYEYR2J)](https://codecov.io/gh/Debi-Ejeta/soccer-api-wrapper)
-
 [![Build Status](https://github.com/Debi-Ejeta/soccer-api-wrapper/actions/workflows/workflow.yml/badge.svg)](https://github.com/Debi-Ejeta/soccer-api-wrapper/actions/workflows/workflow.yml)
-
 [![PyPI](https://img.shields.io/pypi/v/soccer-api-wrapper)](https://pypi.org/project/soccer-api-wrapper/)
-
 [![Documentation Status](https://readthedocs.org/projects/soccer-api-wrapper/badge/?version=latest)](https://soccer-api-wrapper.readthedocs.io/en/latest/?badge=latest)
 
 ## Overview
@@ -40,14 +35,7 @@ listed below
 In the first verion of this library, only the premier league is supported. 
 Other league functionalities will be added in future versions. 
 
-```py
-from soccer_api_wrapper import soccerapi
-# To check the current standings in the premier league
-teams = soccerapi.get_epl_team_standings("YourAPIToken")
-for team in teams:
-    # prints information about the team strating from club at position 1
-    print(team)
-```
+![[Project Preview]](./docs/previews/get_epl_scorers.gif)
 
 Similarly, there are other functions you can call on soccerapi after importing it:
 
