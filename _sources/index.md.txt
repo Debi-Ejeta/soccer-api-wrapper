@@ -40,3 +40,18 @@ Similarly, there are other functions you can call on soccerapi after importing i
 .. automodule:: soccerapi
     :members:
 ```
+## Examples Of Library Usage
+
+![[Project Preview]](./previews/get_epl_matchday.gif)
+
+![[Project Preview]](./previews/get_epl_scorers.gif)
+
+![[Project Preview]](./previews/get_epl_standings.gif)
+
+![[Project Preview]](./previews/get_epl_teams.gif)
+
+![[Project Preview]](./previews/get_player_info.gif)
+
+![[Project Preview]](./previews/get_recent_matches.gif)
+
+![[Project Preview]](./previews/get_team_info.gif)
