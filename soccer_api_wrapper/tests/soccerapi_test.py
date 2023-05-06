@@ -11,7 +11,7 @@ class Tests(unittest.TestCase):
 
     def test_get_team_matches(self):
         with patch('requests.get') as mock_get:
-            soccerapi.get_epl_team_matches("test_token", "test")
+            soccerapi.get_team_matches("test_token", "test")
             self.assertEqual(mock_get.called, True)
 
     def test_get_epl_team_matches_for_a_team(self):
@@ -22,7 +22,7 @@ class Tests(unittest.TestCase):
                 "matchday": "14",
                 "opposition": "Manchester City",
             }
-            response = soccerapi.get_epl_team_matches("test_token", "Arsenal")
+            response = soccerapi.get_team_matches("test_token", "Arsenal")
             self.assertEqual(response.text["id"], "57")
             self.assertEqual(response.text["team"], "Arsenal")
             self.assertEqual(response.text["matchday"], "14")
