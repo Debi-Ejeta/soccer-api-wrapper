@@ -48,14 +48,21 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#quick-start-guide">Quick Start Guide</a><ul>
+<li><a class="reference internal" href="#soccerapi.get_competitions_for_team"><code class="docutils literal notranslate"><span class="pre">get_competitions_for_team()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_epl_matchday"><code class="docutils literal notranslate"><span class="pre">get_epl_matchday()</span></code></a></li>
-<li><a class="reference internal" href="#soccerapi.get_epl_team_matches"><code class="docutils literal notranslate"><span class="pre">get_epl_team_matches()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_epl_team_standings"><code class="docutils literal notranslate"><span class="pre">get_epl_team_standings()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_epl_teams"><code class="docutils literal notranslate"><span class="pre">get_epl_teams()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_epl_top_scorers"><code class="docutils literal notranslate"><span class="pre">get_epl_top_scorers()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_head_to_head_matches"><code class="docutils literal notranslate"><span class="pre">get_head_to_head_matches()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_head_to_head_stats"><code class="docutils literal notranslate"><span class="pre">get_head_to_head_stats()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_matches"><code class="docutils literal notranslate"><span class="pre">get_matches()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_player_by_position"><code class="docutils literal notranslate"><span class="pre">get_player_by_position()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_player_info"><code class="docutils literal notranslate"><span class="pre">get_player_info()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_players_of_team"><code class="docutils literal notranslate"><span class="pre">get_players_of_team()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_recent_matches"><code class="docutils literal notranslate"><span class="pre">get_recent_matches()</span></code></a></li>
 <li><a class="reference internal" href="#soccerapi.get_team_info"><code class="docutils literal notranslate"><span class="pre">get_team_info()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_team_matches"><code class="docutils literal notranslate"><span class="pre">get_team_matches()</span></code></a></li>
+<li><a class="reference internal" href="#soccerapi.get_ucl_matches"><code class="docutils literal notranslate"><span class="pre">get_ucl_matches()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#examples-of-library-usage">Examples Of Library Usage</a></li>
@@ -119,6 +126,23 @@ Other league functionalities will be added in future versions.</p>
 </div>
 <p>Similarly, there are other functions you can call on soccerapi after importing it:</p>
 <span class="target" id="module-soccerapi"></span><dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_competitions_for_team">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_competitions_for_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">team_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_competitions_for_team" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns the competitions a particular team is in</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>team_id</strong> (<em>int</em>) – id of the team</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of competitions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="soccerapi.get_epl_matchday">
 <span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_epl_matchday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matchday</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_epl_matchday" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function that returns matches happening on a particular     matchday in the premier league</p>
@@ -127,23 +151,6 @@ Other league functionalities will be added in future versions.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
 <li><p><strong>matchday</strong> (<em>int</em>) – the value of the matchday</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="soccerapi.get_epl_team_matches">
-<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_epl_team_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">team</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_epl_team_matches" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function that returns matches for a particular premier league team</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
-<li><p><strong>team</strong> (<em>str</em>) – name of the football in the format laid out in the doc</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -201,6 +208,77 @@ Other league functionalities will be added in future versions.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_head_to_head_matches">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_head_to_head_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">home_team_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">away_team_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_head_to_head_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns head to head matches between two given        teams</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>home_team_id</strong> (<em>int</em>) – id of the home team</p></li>
+<li><p><strong>away_team_id</strong> (<em>int</em>) – id of the away team</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_head_to_head_stats">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_head_to_head_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">home_team_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">away_team_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_head_to_head_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns head to head stats between two given        teams including amount of wins/losses/goals</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>home_team_id</strong> (<em>int</em>) – id of the home team</p></li>
+<li><p><strong>away_team_id</strong> (<em>int</em>) – id of the away team</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_matches">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">competition_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns matches happening in the competition        requested</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>competition_name</strong> (<em>str</em>) – Name of competition for which         matches are requested</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_player_by_position">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_player_by_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">team_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_player_by_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns the players in a team at play at        the position specified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>team_id</strong> (<em>int</em>) – id of the team</p></li>
+<li><p><strong>position</strong> (<em>str</em>) – position of players requested</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of players</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="soccerapi.get_player_info">
 <span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_player_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_player_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function that returns information about a player</p>
@@ -213,6 +291,23 @@ Other league functionalities will be added in future versions.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_players_of_team">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_players_of_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">team_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_players_of_team" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns the players in a team</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>team_id</strong> (<em>int</em>) – id of the team</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of players</p>
 </dd>
 </dl>
 </dd></dl>
@@ -248,16 +343,47 @@ Other league functionalities will be added in future versions.</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_team_matches">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_team_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">team</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_team_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns matches for a particular team</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p></li>
+<li><p><strong>team</strong> (<em>str</em>) – name of the football in the format laid out in the doc</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="soccerapi.get_ucl_matches">
+<span class="sig-prename descclassname"><span class="pre">soccerapi.</span></span><span class="sig-name descname"><span class="pre">get_ucl_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#soccerapi.get_ucl_matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns matches happening in the champions league</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>api_token</strong> (<em>str</em>) – api token user gets after registering at         <a class="reference external" href="https://www.football-data.org/">https://www.football-data.org/</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="examples-of-library-usage">
 <h2>Examples Of Library Usage<a class="headerlink" href="#examples-of-library-usage" title="Permalink to this heading">¶</a></h2>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_epl_matchday.gif" /></p>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_epl_scorers.gif" /></p>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_epl_standings.gif" /></p>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_epl_teams.gif" /></p>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_player_info.gif" /></p>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_recent_matches.gif" /></p>
-<p><img alt="[Project Preview]" src="https://github.com/Debi-Ejeta/soccer-api-wrapper/blob/gh-pages/_images/get_team_info.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_epl_matchday.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_epl_scorers.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_epl_standings.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_epl_teams.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_player_info.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_recent_matches.gif" /></p>
+<p><img alt="[Project Preview]" src="_images/get_team_info.gif" /></p>
 </div>
 </div>
 
